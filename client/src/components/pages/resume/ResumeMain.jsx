@@ -1,15 +1,15 @@
-import React, { useEffect}from 'react';
+import React, { useEffect } from 'react';
 import './Resume.css';
-import '../Section.css'
+import '../Section.css';
 import { setURL } from "../../../actions/page";
 import { connect } from 'react-redux';
 
 
 const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
   console.log(match)
-    useEffect(() => {
-      setURL(match.path)
-    }, [setURL, match.path]);
+  useEffect(() => {
+    setURL(match.path)
+  }, [setURL, match.path]);
 
   return (
     <section id="resume" className="resume section-show">
@@ -26,13 +26,13 @@ const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
             <div className="resume-item pb-0">
               <h4>Alice Barkley</h4>
               <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
-              
-                <ul>
-                  <li>Portland par 127,Orlando, FL</li>
-                  <li>(123) 456-7891</li>
-                  <li>alice.barkley@example.com</li>
-                </ul>
-              
+
+              <ul>
+                <li>Portland par 127,Orlando, FL</li>
+                <li>(123) 456-7891</li>
+                <li>alice.barkley@example.com</li>
+              </ul>
+
             </div>
 
             <h3 className="resume-title">Education</h3>
@@ -55,27 +55,27 @@ const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
               <h4>Senior graphic design specialist</h4>
               <h5>2019 - Present</h5>
               <p><em>Experion, New York, NY </em></p>
-              
-                <ul>
-                  <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
-                  <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
-                  <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
-                  <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
-                </ul>
-              
+
+              <ul>
+                <li>Lead in the design, development, and implementation of the graphic, layout, and production communication materials</li>
+                <li>Delegate tasks to the 7 members of the design team and provide counsel on all aspects of the project. </li>
+                <li>Supervise the assessment of all graphic materials in order to ensure quality and accuracy of the design</li>
+                <li>Oversee the efficient use of production project budgets ranging from $2,000 - $25,000</li>
+              </ul>
+
             </div>
             <div className="resume-item">
               <h4>Graphic design specialist</h4>
               <h5>2017 - 2018</h5>
               <p><em>Stepping Stone Advertising, New York, NY</em></p>
-              
-                <ul>
-                  <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
-                  <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
-                  <li>Recommended and consulted with clients on the most appropriate graphic design</li>
-                  <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
-                </ul>
-              
+
+              <ul>
+                <li>Developed numerous marketing programs (logos, brochures,infographics, presentations, and advertisements).</li>
+                <li>Managed up to 5 projects or tasks at a given time while under pressure</li>
+                <li>Recommended and consulted with clients on the most appropriate graphic design</li>
+                <li>Created 4+ design presentations and proposals a month for clients and account managers</li>
+              </ul>
+
             </div>
           </div>
         </div>
@@ -83,7 +83,7 @@ const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
       </div>
     </section>
   )
-}
+};
 
 const mapStateToProps = state => ({
   page: state.page

@@ -1,9 +1,11 @@
 import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import Header from "./components/header/Header";
 import HeaderTop from "./components/headerTop/HeaderTop";
 import ResumeMain from "./components/pages/resume/ResumeMain";
 import About from "./components/pages/about/About";
+import Services from "./components/pages/services/Services";
+import Portfolio from "./components/pages/portfolio/Portfolio";
+import Contact from "./components/pages/contact/Contact";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -24,6 +26,9 @@ const App = () => {
             {/* <Route exact path='/home' component={HeaderTop} /> */}
             <Route exact path='/about' render={({ match }) => <About match={match} />} />
             <Route exact path='/resume' render={({ match }) => <ResumeMain match={match} />} />
+            <Route exact path='/services' render={({ match }) => <Services match={match} />} />
+            <Route exact path='/portfolio' render={({ match }) => <Portfolio match={match} />} />
+            <Route exact path='/contact' render={({ match }) => <Contact match={match} />} />
 
           </Switch>
 

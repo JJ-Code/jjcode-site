@@ -5,13 +5,13 @@ const SocialLinks = () => {
   return (
 
     <div className="social-links">
-      <a href="#" className="twitter">
+      {/* <a href="#" className="twitter">
         <Icofont icon="icofont-twitter" />
-      </a>
+      </a> */}
 
-      <a href="#" className="facebook">
+      {/* <a href="#" className="facebook">
         <Icofont icon="icofont-facebook" />
-      </a>
+      </a> */}
       <a href="#" className="instagram">
         <Icofont icon="icofont-instagram" />
       </a>

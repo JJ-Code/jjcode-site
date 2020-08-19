@@ -22,7 +22,7 @@ const Navbar = ({ page: { url }, setURL }) => {
         <li> <Link to='/resume'>Resume</Link></li>
         <li> <Link to='/services'>Services</Link></li>
         <li> <Link to='/portfolio'>Portfolio</Link></li>
-        <li> <Link to='/contact'>contact</Link></li>
+        <li> <Link to='/contact'>Contact</Link></li>
       </ul>
     </nav>
   )

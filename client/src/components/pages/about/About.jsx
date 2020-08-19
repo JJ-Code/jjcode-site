@@ -16,7 +16,7 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
       {/* <!-- ======= About Me ======= --> */}
       <div className="about-me container">
-    
+
         <div className="section-title">
           <h2>About</h2>
           <p>Learn more about me</p>
@@ -35,18 +35,18 @@ const About = ({ match, page: { url, loading }, setURL }) => {
             <div className="row">
               <div className="col-lg-6">
                 <ul>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Birthday:</strong> 1 May 1995</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Website:</strong> www.example.com</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Phone:</strong> +123 456 7890</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>City:</strong> City : New York, USA</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Birthday:</strong> 1 May 1995</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Website:</strong> www.example.com</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Phone:</strong> +123 456 7890</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>City:</strong> City : New York, USA</li>
                 </ul>
               </div>
               <div className="col-lg-6">
                 <ul>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Age:</strong> 30</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Degree:</strong> Master</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>PhEmailone:</strong> email@example.com</li>
-                  <li><Icofont className="icofont-rounded-right"></Icofont> <strong>Freelance:</strong> Available</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Age:</strong> 30</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Degree:</strong> Master</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>PhEmailone:</strong> email@example.com</li>
+                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Freelance:</strong> Available</li>
                 </ul>
               </div>
             </div>
@@ -67,7 +67,7 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="col-lg-3 col-md-6">
             <div className="count-box">
-              <Icofont className="icofont-simple-smile"></Icofont>
+              <Icofont icon="icofont-simple-smile" />
               <span data-toggle="counter-up">232</span>
               <p>Happy Clients</p>
             </div>
@@ -75,7 +75,7 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
             <div className="count-box">
-              <Icofont className="icofont-document-folder"></Icofont>
+              <Icofont icon="icofont-document-folder" />
               <span data-toggle="counter-up">521</span>
               <p>Projects</p>
             </div>
@@ -83,7 +83,7 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div className="count-box">
-              <Icofont className="icofont-live-support"></Icofont>
+              <Icofont icon="icofont-live-support" />
               <span data-toggle="counter-up">1,463</span>
               <p>Hours Of Support</p>
             </div>
@@ -91,7 +91,7 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
             <div className="count-box">
-              <Icofont className="icofont-users-alt-5"></Icofont>
+              <Icofont icon="icofont-users-alt-5" />
               <span data-toggle="counter-up">15</span>
               <p>Hard Workers</p>
             </div>
@@ -114,21 +114,21 @@ const About = ({ match, page: { url, loading }, setURL }) => {
           <div className="col-lg-6">
 
             <div className="progress">
-              <span className="skill">HTML <Icofont className="val">100%</Icofont></span>
+              <span className="skill">HTML <Icofont icon="val">100%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div className="progress">
-              <span className="skill">CSS <Icofont className="val">90%</Icofont></span>
+              <span className="skill">CSS <Icofont icon="val">90%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div className="progress">
-              <span className="skill">JavaScript <Icofont className="val">75%</Icofont></span>
+              <span className="skill">JavaScript <Icofont icon="val">75%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -139,21 +139,21 @@ const About = ({ match, page: { url, loading }, setURL }) => {
           <div className="col-lg-6">
 
             <div className="progress">
-              <span className="skill">PHP <Icofont className="val">80%</Icofont></span>
+              <span className="skill">PHP <Icofont icon="val">80%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div className="progress">
-              <span className="skill">WordPress/CMS <Icofont className="val">90%</Icofont></span>
+              <span className="skill">WordPress/CMS <Icofont icon="val">90%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
             </div>
 
             <div className="progress">
-              <span className="skill">Photoshop <Icofont className="val">55%</Icofont></span>
+              <span className="skill">Photoshop <Icofont icon="val">55%</Icofont></span>
               <div className="progress-bar-wrap">
                 <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
               </div>
@@ -176,73 +176,85 @@ const About = ({ match, page: { url, loading }, setURL }) => {
         <div className="row">
           <div className="col-lg-3 col-md-4">
             <div className="icon-box">
-              <Icofont className="ri-store-line" style="color: #ffbb2c;"></Icofont>
+              {/* <Icofont icon="ri-store-line" style="color: #ffbb2c;"></Icofont> */}
+              <Icofont icon="brainstorming" />
               <h3>Lorem Ipsum</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div className="icon-box">
-              <Icofont className="ri-bar-chart-box-line" style="color: #5578ff;"></Icofont>
+              {/* <Icofont icon="ri-bar-chart-box-line" style="color: #5578ff;"></Icofont> */}
+              <Icofont icon="education" />
               <h3>Dolor Sitema</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
             <div className="icon-box">
-              <Icofont className="ri-calendar-todo-line" style="color: #e80368;"></Icofont>
+              {/* <Icofont icon="ri-calendar-todo-line" style="color: #e80368;" /> */}
+              <Icofont icon="chart-bar-graph" />
               <h3>Sed perspiciatis</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
             <div className="icon-box">
-              <Icofont className="ri-paint-brush-line" style="color: #e361ff;"></Icofont>
+              <Icofont icon="island-alt" />
+              {/* <Icofont icon="ri-paint-brush-line" style="color: #e361ff;"></Icofont> */}
               <h3>Magni Dolores</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-database-2-line" style="color: #47aeff;"></Icofont>
+              {/* <Icofont icon="ri-database-2-line" style="color: #47aeff;" /> */}
+              <Icofont icon="chart-histogram" />
               <h3>Nemo Enim</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-gradienter-line" style="color: #ffa76e;"></Icofont>
+              {/* <Icofont icon="ri-gradienter-line" style="color: #ffa76e;" /> */}
+              <Icofont icon="search-stock" />
               <h3>Eiusmod Tempor</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-file-list-3-line" style="color: #11dbcf;"></Icofont>
+              {/* <Icofont icon="ri-file-list-3-line" style="color: #11dbcf;" /> */}
+              <Icofont icon="code" />
               <h3>Midela Teren</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-price-tag-2-line" style="color: #4233ff;"></Icofont>
+              <Icofont icon="database" />
+              {/* <Icofont icon="ri-price-tag-2-line" style="color: #4233ff;" /> */}
               <h3>Pira Neve</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-anchor-line" style="color: #b2904f;"></Icofont>
+              <Icofont icon="news" />
+              {/* <Icofont icon="ri-anchor-line" style="color: #b2904f;" /> */}
               <h3>Dirada Pack</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-disc-line" style="color: #b20969;"></Icofont>
+              {/* <Icofont icon="ri-disc-line" style="color: #b20969;" /> */}
+              <Icofont icon="runner-alt-1" />
               <h3>Moton Ideal</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-base-station-line" style="color: #ff5828;"></Icofont>
+              <Icofont icon="court" />
+              {/* <Icofont icon="ri-base-station-line" style="color: #ff5828;" /> */}
               <h3>Verdo Park</h3>
             </div>
           </div>
           <div className="col-lg-3 col-md-4 mt-4">
             <div className="icon-box">
-              <Icofont className="ri-fingerprint-line" style="color: #29cc61;"></Icofont>
+              {/* <Icofont icon="ri-fingerprint-line" style="color: #29cc61;" /> */}
+              <Icofont icon="iphone" />
               <h3>Flavor Nivelanda</h3>
             </div>
           </div>
@@ -262,9 +274,9 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="testimonial-item">
             <p>
-              <Icofont className="bx bxs-quote-alt-left quote-icon-left"></Icofont>
+              <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
             Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-            <Icofont className="bx bxs-quote-alt-right quote-icon-right"></Icofont>
+            <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
             </p>
             <img src="assets/img/testimonials/testimonials-1.jpg" className="testimonial-img" alt="" />
             <h3>Saul Goodman</h3>
@@ -273,9 +285,9 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="testimonial-item">
             <p>
-              <Icofont className="bx bxs-quote-alt-left quote-icon-left"></Icofont>
+              <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
             Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-            <Icofont className="bx bxs-quote-alt-right quote-icon-right"></Icofont>
+            <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
             </p>
             <img src="assets/img/testimonials/testimonials-2.jpg" className="testimonial-img" alt="" />
             <h3>Sara Wilsson</h3>
@@ -284,9 +296,9 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="testimonial-item">
             <p>
-              <Icofont className="bx bxs-quote-alt-left quote-icon-left"></Icofont>
+              <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
             Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-            <Icofont className="bx bxs-quote-alt-right quote-icon-right"></Icofont>
+            <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
             </p>
             <img src="assets/img/testimonials/testimonials-3.jpg" className="testimonial-img" alt="" />
             <h3>Jena Karlis</h3>
@@ -295,9 +307,9 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="testimonial-item">
             <p>
-              <Icofont className="bx bxs-quote-alt-left quote-icon-left"></Icofont>
+              <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
             Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-            <Icofont className="bx bxs-quote-alt-right quote-icon-right"></Icofont>
+            <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
             </p>
             <img src="assets/img/testimonials/testimonials-4.jpg" className="testimonial-img" alt="" />
             <h3>Matt Brandon</h3>
@@ -306,9 +318,9 @@ const About = ({ match, page: { url, loading }, setURL }) => {
 
           <div className="testimonial-item">
             <p>
-              <Icofont className="bx bxs-quote-alt-left quote-icon-left"></Icofont>
+              <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
             Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum quid.
-            <Icofont className="bx bxs-quote-alt-right quote-icon-right"></Icofont>
+            <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
             </p>
             <img src="assets/img/testimonials/testimonials-5.jpg" className="testimonial-img" alt="" />
             <h3>John Larson</h3>
@@ -323,11 +335,12 @@ const About = ({ match, page: { url, loading }, setURL }) => {
     </section>
 
   )
-}
+};
+
 const mapStateToProps = state => ({
   page: state.page
 });
 export default connect(
   mapStateToProps,
-  { setURL })(About)
+  { setURL })(About);
 
