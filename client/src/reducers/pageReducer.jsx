@@ -17,11 +17,11 @@ export default function (state = initialState, action) {
         url: payload,
         loading: false
       };
-    // case SET_LOADING:
-    //   return {
-    //     ...state,
-    //     loading: true
-    //   };
+    case SET_LOADING:
+      return {
+        ...state,
+        loading: true
+      };
     // case PROFILE_ERROR:
     //   return {
     //     ...state,

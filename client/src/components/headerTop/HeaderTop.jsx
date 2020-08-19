@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import SocialLinks from "../layouts/SocialLinks";
 import { setURL } from "../../actions/page";
-
+import Logo from "../../images/jl-logo.png";
 
 const HeaderTop = ({ match, page: { url }, setURL }) => {
 
@@ -22,15 +22,15 @@ const HeaderTop = ({ match, page: { url }, setURL }) => {
 
   return (
 
-    <Fragment>
-
-
+    <Fragment> 
       <header id="header" className={checkPage()}>
         <div className="container">
 
           <h1>
             <Link to='/' onClick={() => setURL('home')}>Jaymee Liu</Link>
+            
           </h1>
+          <h2>I'm a passionate <span>product manager</span> living in SF</h2>
           <Navbar />
           <SocialLinks />
 

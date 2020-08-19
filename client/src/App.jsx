@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Header from "./components/header/Header";
 import HeaderTop from "./components/headerTop/HeaderTop";
 import ResumeMain from "./components/pages/resume/ResumeMain";
+import About from "./components/pages/about/About";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -21,6 +22,7 @@ const App = () => {
           {/* <HeaderTop /> */}
           <Switch>
             {/* <Route exact path='/home' component={HeaderTop} /> */}
+            <Route exact path='/about' render={({ match }) => <About match={match} />} />
             <Route exact path='/resume' render={({ match }) => <ResumeMain match={match} />} />
 
           </Switch>
