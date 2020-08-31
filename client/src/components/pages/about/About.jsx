@@ -6,6 +6,8 @@ import { connect } from 'react-redux';
 import Icofont from 'react-icofont';
 import Bio from "./Bio";
 import Count from "./Count";
+import Skills from "./Skills";
+import Interest from "./Interest";
 
 
 const About = ({ match, page: { url, loading }, setURL }) => {
@@ -18,171 +20,16 @@ const About = ({ match, page: { url, loading }, setURL }) => {
       {/* <!-- ======= About Me ======= --> */}
       <Bio />
 
-
       {/* <!-- ======= Counts ======= --> */}
-     
-      {/* <!-- End Counts --> */}
+
+      <Count />
 
       {/* <!-- ======= Skills  ======= --> */}
-      <div className="skills container">
-
-        <div className="section-title">
-          <h2>Skills</h2>
-        </div>
-
-        <div className="row skills-content">
-
-          <div className="col-lg-6">
-
-            <div className="progress">
-              <span className="skill">HTML <Icofont icon="val">100%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">CSS <Icofont icon="val">90%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">JavaScript <Icofont icon="val">75%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-          <div className="col-lg-6">
-
-            <div className="progress">
-              <span className="skill">PHP <Icofont icon="val">80%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">WordPress/CMS <Icofont icon="val">90%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-            <div className="progress">
-              <span className="skill">Photoshop <Icofont icon="val">55%</Icofont></span>
-              <div className="progress-bar-wrap">
-                <div className="progress-bar" role="progressbar" aria-valuenow="55" aria-valuemin="0" aria-valuemax="100"></div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-
-      </div>
-      {/* <!-- End Skills --> */}
+    
+      <Skills />
 
       {/* <!-- ======= Interests ======= --> */}
-      <div className="interests container">
-
-        <div className="section-title">
-          <h2>Interests</h2>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-3 col-md-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-store-line" style="color: #ffbb2c;"></Icofont> */}
-              <Icofont icon="brainstorming" />
-              <h3>Lorem Ipsum</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-bar-chart-box-line" style="color: #5578ff;"></Icofont> */}
-              <Icofont icon="education" />
-              <h3>Dolor Sitema</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-md-0">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-calendar-todo-line" style="color: #e80368;" /> */}
-              <Icofont icon="chart-bar-graph" />
-              <h3>Sed perspiciatis</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4 mt-lg-0">
-            <div className="icon-box">
-              <Icofont icon="island-alt" />
-              {/* <Icofont icon="ri-paint-brush-line" style="color: #e361ff;"></Icofont> */}
-              <h3>Magni Dolores</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-database-2-line" style="color: #47aeff;" /> */}
-              <Icofont icon="chart-histogram" />
-              <h3>Nemo Enim</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-gradienter-line" style="color: #ffa76e;" /> */}
-              <Icofont icon="search-stock" />
-              <h3>Eiusmod Tempor</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-file-list-3-line" style="color: #11dbcf;" /> */}
-              <Icofont icon="code" />
-              <h3>Midela Teren</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <Icofont icon="database" />
-              {/* <Icofont icon="ri-price-tag-2-line" style="color: #4233ff;" /> */}
-              <h3>Pira Neve</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <Icofont icon="news" />
-              {/* <Icofont icon="ri-anchor-line" style="color: #b2904f;" /> */}
-              <h3>Dirada Pack</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-disc-line" style="color: #b20969;" /> */}
-              <Icofont icon="runner-alt-1" />
-              <h3>Moton Ideal</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              <Icofont icon="court" />
-              {/* <Icofont icon="ri-base-station-line" style="color: #ff5828;" /> */}
-              <h3>Verdo Park</h3>
-            </div>
-          </div>
-          <div className="col-lg-3 col-md-4 mt-4">
-            <div className="icon-box">
-              {/* <Icofont icon="ri-fingerprint-line" style="color: #29cc61;" /> */}
-              <Icofont icon="iphone" />
-              <h3>Flavor Nivelanda</h3>
-            </div>
-          </div>
-        </div>
-
-      </div>
-      {/* <!-- End Interests --> */}
+<Interest />
 
       {/* <!-- ======= Testimonials ======= --> */}
       <div className="testimonials container">

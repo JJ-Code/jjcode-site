@@ -1,5 +1,6 @@
 import React from 'react';
 import CountIcofont from "./aboutLayouts/CountIcofont";
+import { v4 as uuid } from 'uuid';
 
 const Count = () => {
   let countDataObj = [
@@ -30,7 +31,7 @@ const Count = () => {
 
       <div className="row">
         {countDataObj.map((curr) => {
-          <CountIcofont icon={curr.icon} counterUp={curr.counterUp} title={curr.title}/>
+          return <CountIcofont icon={curr.icon} counterUp={curr.counterUp} title={curr.title} key={uuid()}/>
         })}
 
       </div>

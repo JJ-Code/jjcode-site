@@ -1,14 +1,53 @@
 import React from 'react'
+import { chunkArray } from "../../../utilities/helperFX";
 import climb from "../../../images/climb.jpg";
-import Icofont from 'react-icofont';
 import ListIcofont from "./aboutLayouts/ListIcofont";
+import { v4 as uuid } from 'uuid';
 
 const Bio = () => {
 
-  const leftSideArr = [["Birthday:", "1 May 1995"], ["Website:", "www.example.com"], ["Birthday:", "1 May 1995"], ["Phone:", "+123 456 7890"], ["City : New York, USA"]];
+  const aboutDataObj = [{
+    dataType: "Birthday:",
+    value: "1 May 1995"
+  },
+  {
+    dataType: "Website:",
+    value: "www.example.com"
+  },
+  {
+    dataType: "Website:",
+    value: "www.example.com"
+  },
+  {
+    dataType: "Phone:",
+    value: "www.example.com"
+  }, {
+    dataType: "City:",
+    value: "New York, USA"
+  }, {
+    dataType: "Age:",
+    value: "1 May 1995"
+  },
+  {
+    dataType: "Degree:",
+    value: "www.example.com"
+  },
+  {
+    dataType: "Website:",
+    value: "www.example.com"
+  },
+  {
+    dataType: "Phone:",
+    value: "www.example.com"
+  }, {
+    dataType: "Freelance:",
+    value: "New York, USA"
+  }];
 
-  const rightSideArr = [["Age:", "5"], ["Degree:", "Master"], ["Birthday:", "1 May 1995"], ["PhEmailone:", "+123 456 7890"], ["Freelance:", "Available"]];
+  //array chunck should match the css class of column aka col-lg-6
+  const half = chunkArray(aboutDataObj, 6)
 
+  console.log(half)
   return (
     <div className="about-me container">
 
@@ -28,20 +67,24 @@ const Bio = () => {
             magna aliqua.
           </p>
           <div className="row">
-            <div className="col-lg-6">
-              <ul>
-                {leftSideArr.map((curr) => {
-                  return <ListIcofont strongStr={curr[0]} str={curr[1]} />
+            {/* half is a array of a array of object. Therefore 2 maps are needed to loop thru both arrays to cut down on markup*/}
+
+            {half.map((currArr) => {
+              return currArr.map((curr) => {
+                return <ListIcofont strongStr={curr.dataType} str={curr.value} key={uuid()} />
+              })
+            })
+
+            }
+            {/* {half[0].map((curr) => {
+                  return <ListIcofont strongStr={curr.dataType} str={curr.value} key={uuid()}/>
                 })}
-              </ul>
-            </div>
-            <div className="col-lg-6">
-              <ul>
-                {rightSideArr.map((curr) => {
-                  return <ListIcofont strongStr={curr[0]} str={curr[1]} />
-                })}
-              </ul>
-            </div>
+  
+ 
+                {half[1].map((curr) => {
+                  return <ListIcofont strongStr={curr.dataType} str={curr.value} key={uuid()} />
+                })} */}
+
           </div>
           <p>
             Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
