@@ -209,6 +209,12 @@
   background-color: #18d26e !important;
 }
 
+.resizeImage {
+  width: 400px !important;
+  height: 400px !important;
+
+}
+
 @media (max-width: 767px) {
   .testimonials {
     margin: 30px 10px;

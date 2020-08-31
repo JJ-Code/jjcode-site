@@ -3,13 +3,51 @@ import './Resume.css';
 import '../Section.css';
 import { setURL } from "../../../actions/page";
 import { connect } from 'react-redux';
-
+import { chunkArray } from "../../../utilities/helperFX";
+import { Result } from 'express-validator';
+import ResumeItem from "./ResumeItem";
+import { v4 as uuid } from 'uuid';
 
 const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
   console.log(match)
   useEffect(() => {
     setURL(match.path)
   }, [setURL, match.path]);
+
+  const resumeDataObj = [{
+    sectionName: "Summary",
+    sectionTitle: "Jay Jay",
+    description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+  },
+    {
+      sectionName: "Summary",
+      sectionTitle: "Jay Jay",
+      description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+    },
+    {
+      sectionName: "Summary",
+      sectionTitle: "Jay Jay",
+      description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+    },
+    {
+      sectionName: "Summary",
+      sectionTitle: "Jay Jay",
+      description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+    },
+    {
+      sectionName: "Summary",
+      sectionTitle: "Jay Jay",
+      description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+    },
+    {
+      sectionName: "Summary",
+      sectionTitle: "Jay Jay",
+      description: "Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable."
+    }
+  
+  ]
+
+  let splitArr = chunkArray(resumeDataObj, 3)
 
   return (
     <section id="resume" className="resume section-show">
@@ -21,9 +59,21 @@ const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
         </div>
 
         <div className="row">
-          <div className="col-lg-6">
+          {
+            splitArr.map((currArr) => {
+              return (<div className="col-lg-6" key={uuid()}>
+                {currArr.map((curr) => {
+                  return <ResumeItem sectionName={curr.sectionName} sectionTitle={curr.sectionTitle} description={curr.description} key={uuid()} />
+                })
+                }
+              </div>)
+
+            })
+          }
+
+          {/* <div className="col-lg-6">
             <h3 className="resume-title">Sumary</h3>
-            <div className="resume-item pb-0">
+            <div className="resume-item">
               <h4>Alice Barkley</h4>
               <p><em>Innovative and deadline-driven Graphic Designer with 3+ years of experience designing and developing user-centered digital/print marketing material from initial concept to final, polished deliverable.</em></p>
 
@@ -77,7 +127,7 @@ const ResumeMain = ({ match, page: { url, loading }, setURL }) => {
               </ul>
 
             </div>
-          </div>
+          </div> */}
         </div>
 
       </div>
