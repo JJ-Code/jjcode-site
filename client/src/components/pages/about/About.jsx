@@ -3,8 +3,10 @@ import '../Section.css'
 import './About.css'
 import { setURL } from '../../../actions/page';
 import { connect } from 'react-redux';
-import climb from "../../../images/climb.jpg";
 import Icofont from 'react-icofont';
+import Bio from "./Bio";
+import Count from "./Count";
+
 
 const About = ({ match, page: { url, loading }, setURL }) => {
   console.log(match)
@@ -13,93 +15,12 @@ const About = ({ match, page: { url, loading }, setURL }) => {
   }, [setURL, match.path]);
   return (
     <section id="about" className="about">
-
       {/* <!-- ======= About Me ======= --> */}
-      <div className="about-me container">
+      <Bio />
 
-        <div className="section-title">
-          <h2>About</h2>
-          <p>Learn more about me</p>
-        </div>
-
-        <div className="row">
-          <div className="col-lg-4" data-aos="fade-right">
-            <img src={climb} className="img-fluid" alt="" />
-          </div>
-          <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-            <h3>UI/UX &amp; Graphic Designer</h3>
-            <p className="font-italic">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-              magna aliqua.
-          </p>
-            <div className="row">
-              <div className="col-lg-6">
-                <ul>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Birthday:</strong> 1 May 1995</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Website:</strong> www.example.com</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Phone:</strong> +123 456 7890</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>City:</strong> City : New York, USA</li>
-                </ul>
-              </div>
-              <div className="col-lg-6">
-                <ul>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Age:</strong> 30</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Degree:</strong> Master</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>PhEmailone:</strong> email@example.com</li>
-                  <li><Icofont icon="icofont-rounded-right"></Icofont> <strong>Freelance:</strong> Available</li>
-                </ul>
-              </div>
-            </div>
-            <p>
-              Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-              Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
-          </p>
-          </div>
-        </div>
-
-      </div>
-      {/* <!-- End About Me --> */}
 
       {/* <!-- ======= Counts ======= --> */}
-      <div className="counts container">
-
-        <div className="row">
-
-          <div className="col-lg-3 col-md-6">
-            <div className="count-box">
-              <Icofont icon="icofont-simple-smile" />
-              <span data-toggle="counter-up">232</span>
-              <p>Happy Clients</p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 mt-5 mt-md-0">
-            <div className="count-box">
-              <Icofont icon="icofont-document-folder" />
-              <span data-toggle="counter-up">521</span>
-              <p>Projects</p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <Icofont icon="icofont-live-support" />
-              <span data-toggle="counter-up">1,463</span>
-              <p>Hours Of Support</p>
-            </div>
-          </div>
-
-          <div className="col-lg-3 col-md-6 mt-5 mt-lg-0">
-            <div className="count-box">
-              <Icofont icon="icofont-users-alt-5" />
-              <span data-toggle="counter-up">15</span>
-              <p>Hard Workers</p>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
+     
       {/* <!-- End Counts --> */}
 
       {/* <!-- ======= Skills  ======= --> */}
