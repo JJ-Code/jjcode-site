@@ -41,8 +41,33 @@ const aboutMeData = {
       quote: "As a Product Manager, the main focus is to create products that address a want, a need, and a desire with usability and innovation in mind."
     },
     {
-      title: "Product Manager",
+      title: "Product Manager and Marketer",
       quote: "The main focus for both a marketer and product manager in the end is the same, which are the end users. Therefore, I approach any product development with both of these 2 focuses in mind."
+    },
+    {
+      title: "Developer",
+      quote: "As a developer, I create code that is scalable, reusable with users in mind."
+    }
+  ],
+
+  education: [
+    {
+      school: "University of California, Santa Cruz",
+      date: "September 2006 - June 2010",
+      degree: ["Bachelor of Arts, Business Management Economics",	"Bachelor of Arts, Legal Studies" ]
+    },
+    {
+      school: "University of California, Berkeley Coding Program",
+      date: "August 2017 – February 2018",
+      degree: ["Full Stack Web Development"],
+      note: "An intensive 24-week program on designing and building web applications."
+    }
+  ],
+  certification: [
+    {
+      name: "Certified Scrum Master by Scrum Alliance",
+      date: "February 2018 – Present"
+
     }]
 
 
