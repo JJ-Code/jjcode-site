@@ -30,7 +30,7 @@ const aboutMeData = {
       summary: "My motto is there is nothing you can’t do if you set your mind to it. I like to break things apart and understand how it ticks then precede to assemble it back together with improvements. It is like a puzzle I must solve."
     }
   ],
-  
+
   productDefined: [
     {
       title: "Marketer",
@@ -53,12 +53,12 @@ const aboutMeData = {
   education: [
     {
       school: "University of California, Santa Cruz",
-      date: "September 2006 - June 2010",
-      degree: ["Bachelor of Arts, Business Management Economics",	"Bachelor of Arts, Legal Studies" ]
+      dateRange: "September 2006 - June 2010",
+      degree: ["Bachelor of Arts, Business Management Economics", "Bachelor of Arts, Legal Studies"]
     },
     {
       school: "University of California, Berkeley Coding Program",
-      date: "August 2017 – February 2018",
+      dateRange: "August 2017 – February 2018",
       degree: ["Full Stack Web Development"],
       note: "An intensive 24-week program on designing and building web applications."
     }
@@ -66,14 +66,9 @@ const aboutMeData = {
   certification: [
     {
       name: "Certified Scrum Master by Scrum Alliance",
-      date: "February 2018 – Present"
+      dateRange: "February 2018 – Present"
 
     }]
-
-
-
-
-
 
 }
 

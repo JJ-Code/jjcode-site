@@ -2,26 +2,29 @@ const mongoose = require('mongoose');
 
 const AboutInfoSchema = new mongoose.Schema({
   summary: {
-    type: String
+    type: String,
+    require: true
   },
-  skills: [
-    {
-      type: String
-    }],
-  techSkills: [
-    {
-      type: String
-    }],
+  skills: {
+    type: [String],
+    required: true
+  },
+  techSkills: {
+    type: [String],
+    required: true
+  },
   personality: [
     {
       title: {
-        type: String
+        type: String,
+        required: true
       },
       tagline: {
         type: String
       },
       summary: {
-        type: String
+        type: String,
+        required: true
       },
     }
   ],
@@ -31,21 +34,25 @@ const AboutInfoSchema = new mongoose.Schema({
         type: String
       },
       quote: {
-        type: String
+        type: String,
+        required: true
       }
     }
   ],
   education: [
     {
       school: {
-        type: String
+        type: String,
+        required: true
       },
-      date: {
-        type: String
+      dateRange: {
+        type: String,
+        required: true
       },
       degree: [
         {
-          type: String
+          type: String,
+          required: true
         }
       ]
     }
@@ -53,10 +60,15 @@ const AboutInfoSchema = new mongoose.Schema({
   certification: [
     {
       name: {
-        type: String
+        type: String,
+        required: true
+      },
+      dateRange: {
+        type: String,
+        required: true
       }
+
     }]
+});
 
-
-
-})
+module.exports = mongoose.model('aboutInfo', AboutInfoSchema)
