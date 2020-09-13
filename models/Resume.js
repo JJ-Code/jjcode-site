@@ -1,26 +1,27 @@
 const mongoose = require('mongoose');
 
 const ResumeSchema = new mongoose.Schema({
-
+  about: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'about'
+  },
   experience: [
     {
       company: {
         type: String,
         required: true
       },
-      from: {
-        type: Date,
+      title: {
+        type: String,
         required: true
-      },
-      to: {
-        type: Date
       },
       current: {
         type: Boolean,
         default: false
       },
       description: {
-        type: String
+        type: [String],
+        required: true
       }
     }
   ]

@@ -2,6 +2,7 @@ const express = require('express');
 const connectDB = require('./config/db');
 const path = require('path');
 const dotenv = require('dotenv');
+const morgan = require('morgan');
 const colors = require('colors');
 
 
@@ -11,6 +12,9 @@ dotenv.config({ path: './config/config.env' });
 //Connect to database
 connectDB();
 
+//Routes files
+const about = require('./routes/api/about');
+const resume = require('./routes/api/resume');
 
 //initatlize express
 const app = express();
@@ -19,6 +23,18 @@ const app = express();
 
 // Init Middleware -vBody parser
 app.use(express.json());
+
+
+// Dev logging middleware
+if (process.env.NODE_ENV === 'development') {
+  app.use(morgan('dev'));
+}
+
+
+//Mount routers
+app.use('/api/about', about);
+app.use('/api/resume', resume);
+
 
 
 //Test Route

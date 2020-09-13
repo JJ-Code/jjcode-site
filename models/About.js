@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const AboutInfoSchema = new mongoose.Schema({
+const AboutSchema = new mongoose.Schema({
   summary: {
     type: String,
     require: true
@@ -71,4 +71,4 @@ const AboutInfoSchema = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('aboutInfo', AboutInfoSchema)
+module.exports = mongoose.model('about', AboutSchema)
