@@ -1,10 +1,11 @@
 import { combineReducers } from "redux";
 import pageReducer from './pageReducer';
-// import techReducer from './techReducer';
+import bioReducer from './bioReducer';
 
 
 export default combineReducers({
-  page: pageReducer
+  page: pageReducer,
+  aboutData: bioReducer
 });
 
 // export default combineReducers({

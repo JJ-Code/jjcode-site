@@ -3,8 +3,10 @@ import { chunkArray } from "../../../utilities/helperFX";
 import climb from "../../../images/climb.jpg";
 import ListIcofont from "./aboutLayouts/ListIcofont";
 import { v4 as uuid } from 'uuid';
+import { connect } from 'react-redux';
 
-const Bio = () => {
+
+const Bio = ({ aboutData: { summary } }) => {
 
   const aboutDataObj = [{
     dataType: "Birthday:",
@@ -47,7 +49,8 @@ const Bio = () => {
   //array chunck should match the css class of column aka col-lg-6
   const half = chunkArray(aboutDataObj, 6)
 
-  console.log(half)
+  console.log(half);
+  console.log(summary);
   return (
     <div className="about-me container">
 
@@ -63,8 +66,7 @@ const Bio = () => {
         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
           <h3>UI/UX &amp; Graphic Designer</h3>
           <p className="font-italic">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore
-            magna aliqua.
+            {summary}
           </p>
           <div className="row">
             {/* half is a array of a array of object. Therefore 2 maps are needed to loop thru both arrays to cut down on markup*/}
@@ -97,4 +99,9 @@ const Bio = () => {
   )
 }
 
-export default Bio
+
+const mapStateToProps = state => ({
+  aboutData: state.aboutData
+});
+
+export default connect(mapStateToProps, {})(Bio);
