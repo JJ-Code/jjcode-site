@@ -1,9 +1,10 @@
 const mongoose = require('mongoose');
 
 const ResumeSchema = new mongoose.Schema({
-  about: {
+  aboutID: {
     type: mongoose.Schema.Types.ObjectId,
-    ref: 'about'
+    ref: 'About',
+    required: true
   },
   experience: [
     {

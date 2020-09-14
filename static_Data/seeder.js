@@ -8,6 +8,7 @@ dotenv.config({ path: '../config/config.env' });
 
 // Load models
 const About = require('../models/About');
+const Resume = require('../models/Resume');
 
 // Connect to DB
 mongoose.connect(process.env.MONGO_URI, {
@@ -23,11 +24,16 @@ const about = JSON.parse(
   fs.readFileSync(`${__dirname}/about.json`, 'utf-8')
 );
 
+const resume = JSON.parse(
+  fs.readFileSync(`${__dirname}/resume.json`, 'utf-8')
+);
+
 
 // Import into DB
 const importData = async () => {
   try {
     await About.create(about);
+    await Resume.create(resume);
     console.log('Data Imported...'.green.inverse);
     process.exit();
   } catch (err) {
@@ -41,6 +47,7 @@ const importData = async () => {
 const deleteData = async () => {
   try {
     await About.deleteMany();
+    await Resume.deleteMany();
     console.log('Data Destroyed...'.red.inverse);
     process.exit();
   } catch (err) {

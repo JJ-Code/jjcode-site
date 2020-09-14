@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const axios = require('axios');
 const { check, validationResult } = require('express-validator');
-const About = require('../../models/About')
+const About = require('../../models/About');
 
 
 
@@ -11,7 +11,7 @@ const About = require('../../models/About')
 // @access   Public
 router.get('/', async (req, res) => {
   try {
-    const aboutInfo = await About.find().populate('about', ['_id','summary', 'skills', 'techSkills', 'personality', 'productDefined', 'education', 'certification']);
+    const aboutInfo = await About.find().populate('about');
     res.json(aboutInfo);
   } catch (err) {
     console.error(err.message);
@@ -19,6 +19,25 @@ router.get('/', async (req, res) => {
   }
 });
 
+
+// @route    GET api/about
+// @desc     Get one about info
+// @access   Public
+router.get('/:id', async (req, res) => {
+  try {
+    const aboutOne = await About.findById(req.params.id);
+  
+    //sending result to client 
+    res.status(200).json({
+      success: true,
+      data: aboutOne
+    });
+
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 
 // @route    POST api/about
@@ -34,28 +53,20 @@ router.post('/', [
       return res.status(400).json({ errors: errors.array() });
     }
     console.log(req.body);
-    //destructing the params from the post request 
-    const {
-      summary, skills, techSkills, personality, productDefined, education, certification
-    } = req.body;
 
     try {
-      //Build about obj to be put into db, creating new object  
-     let about = new About({
-        summary,
-        skills,
-        techSkills,
-        personality,
-        productDefined,
-        education,
-        certification
-      })
-      await about.save();
+      //Creating new about object 
+      const about = await About.create(req.body);
 
-      //resolve the request with sending the about obj back
+      //sending about data to client after it is completed as payload
+      res.status(201).json({
+        success: true,
+        data: about
+      });
+
 
       console.log(about)
-      res.json(about);
+
 
     } catch (err) {
       console.error(err.message);

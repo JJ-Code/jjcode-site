@@ -7,16 +7,40 @@ const About = require('../../models/About')
 
 
 
-// @route    GET api/resume/me
-// @desc     Get current reseume info
+// @route    GET api/resume/
+// @desc     Get all current user reseume info
 // @access   Public
-router.get('/me',
+router.get('/',
   async (req, res) => {
     //grabbing resume info from db 
+    console.log(req.params.id)
     try {
-      const resume = await Resume.findOne({
-        about: '5f5d884dc957a5b9fe8d0780'
-      }).populate('about', 'experience');
+
+      const resume = await Resume.find().populate('about', 'experience');
+
+      if (!resume) {
+        return res.status(400).json({ msg: 'There is no resume experience in db for any users' });
+      }
+      //if there is a user send it to front end
+      res.json(resume);
+    } catch (err) {
+      console.error(err.message);
+      res.status(500).send('Server Error');
+    }
+  });
+
+
+
+// @route    GET api/resume/:aboutID
+// @desc     Get one current user reseume info
+// @access   Public
+router.get('/:aboutID',
+  async (req, res) => {
+    //grabbing resume info from db 
+    console.log(req.params.id)
+    try {
+
+      const resume = await Resume.findOne({ aboutID: req.params.aboutID }).populate('about', 'experience');
 
       if (!resume) {
         return res.status(400).json({ msg: 'There is no resume experience' });
@@ -29,18 +53,17 @@ router.get('/me',
     }
   });
 
-
-// @route    PUT api/profile/experience
-// @desc     Add profile experience
+// @route    Post api/resume/about id/experience
+// @desc     Add resume experience
 // @access   Private
-router.post('/experience', [
+router.post('/:id/experience', [
   check('experience', 'experience is required').not().isEmpty()],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    console.log(req.body);
+    console.log(req.params.id);
     //destructing the params from the post request
     const {
       experience
@@ -48,14 +71,19 @@ router.post('/experience', [
 
 
     try {
-      let resume = new Resume({
-        about: '5f5d884dc957a5b9fe8d0780',
+      let resume = await Resume.create({
+        aboutID: req.params.id,
         experience
       })
+      //console.log(resume)
 
-      await resume.save();
+      //sending result to client 
+      res.status(200).json({
+        success: true,
+        data: resume
+      });
 
-      res.json(resume);
+      //res.json(resume);
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');
@@ -74,4 +102,4 @@ module.exports = router;
 // @desc      Test Route
 // @access    Public
 
-router.get('/', (req, res) => res.send('resume route'));
+//router.get('/', (req, res) => res.send('resume route'));
