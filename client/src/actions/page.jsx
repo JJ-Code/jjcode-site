@@ -9,7 +9,7 @@ export const loading= () => dispatch => {
 
 // get url
 export const setURL = url => dispatch => {
-  console.log(url);
+  //console.log(url);
   dispatch({
     type: SET_URL
   ,

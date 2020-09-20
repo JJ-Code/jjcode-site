@@ -13,16 +13,21 @@ const About = require('../../models/About')
 router.get('/',
   async (req, res) => {
     //grabbing resume info from db 
-    console.log(req.params.id)
     try {
 
-      const resume = await Resume.find().populate('about', 'experience');
+      const allResume = await Resume.find().populate('about', 'experience');
 
-      if (!resume) {
+      if (!allResume) {
         return res.status(400).json({ msg: 'There is no resume experience in db for any users' });
       }
       //if there is a user send it to front end
-      res.json(resume);
+      //res.json(resume);
+
+      res.status(200).json({
+        success: true,
+        data: allResume
+      });
+
     } catch (err) {
       console.error(err.message);
       res.status(500).send('Server Error');
@@ -31,27 +36,33 @@ router.get('/',
 
 
 
-// @route    GET api/resume/:aboutID
+// @route    GET api/resume/:id
 // @desc     Get one current user reseume info
 // @access   Public
-router.get('/:aboutID',
-  async (req, res) => {
-    //grabbing resume info from db 
-    console.log(req.params.id)
-    try {
+router.get('/:id', async (req, res) => {
+  //grabbing resume info from db 
+  console.log(req.params.id)
+  try {
 
-      const resume = await Resume.findOne({ aboutID: req.params.aboutID }).populate('about', 'experience');
+    const resume = await Resume.findById(req.params.id);
 
-      if (!resume) {
-        return res.status(400).json({ msg: 'There is no resume experience' });
-      }
-      //if there is a user send it to front end
-      res.json(resume);
-    } catch (err) {
-      console.error(err.message);
-      res.status(500).send('Server Error');
+    if (!resume) {
+      return res.status(400).json({ msg: 'There is no resume experience' });
     }
-  });
+
+    console.log(resume.experience);
+    res.status(200).json({
+      success: true,
+      data: resume.experience
+    });
+
+    //if there is a user send it to front end
+    //res.json(resume);
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send('Server Error');
+  }
+});
 
 // @route    Post api/resume/about id/experience
 // @desc     Add resume experience

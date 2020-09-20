@@ -26,7 +26,7 @@ router.get('/', async (req, res) => {
 router.get('/:id', async (req, res) => {
   try {
     const aboutOne = await About.findById(req.params.id);
-  
+    console.log(aboutOne)
     //sending result to client 
     res.status(200).json({
       success: true,

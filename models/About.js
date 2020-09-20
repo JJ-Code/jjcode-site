@@ -25,7 +25,7 @@ const AboutSchema = new mongoose.Schema({
       summary: {
         type: String,
         required: true
-      },
+      }
     }
   ],
   productDefined: [
@@ -71,4 +71,4 @@ const AboutSchema = new mongoose.Schema({
     }]
 });
 
-module.exports = mongoose.model('About', AboutSchema)
+module.exports = mongoose.model('about', AboutSchema)

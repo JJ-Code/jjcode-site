@@ -1,12 +1,13 @@
-import React, {Fragment} from 'react'
+import React, { Fragment } from 'react';
 
-const ResumeItem = ({ sectionName, sectionTitle, description }) => {
+const ResumeItem = ({ title, company, description, current }) => {
+  console.log("title");
   return (
 
     <Fragment >
-      <h3 className="resume-title">{sectionName}</h3>
+      <h3 className="resume-title">{title}</h3>
       <div className="resume-item">
-        <h4>{sectionTitle}</h4>
+        <h4>{company}</h4>
         <p><em>{description}</em></p>
 
         <ul>

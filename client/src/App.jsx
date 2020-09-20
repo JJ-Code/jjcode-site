@@ -2,6 +2,7 @@ import React, { useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import HeaderTop from "./components/headerTop/HeaderTop";
 import ResumeMain from "./components/pages/resume/ResumeMain";
+import Resume from "./components/pages/resume/Resume";
 import About from "./components/pages/about/About";
 import Services from "./components/pages/services/Services";
 import Portfolio from "./components/pages/portfolio/Portfolio";
@@ -26,7 +27,10 @@ const App = () => {
           <Switch>
             {/* <Route exact path='/home' component={HeaderTop} /> */}
             <Route exact path='/about' render={({ match }) => <About match={match} />} />
-            <Route exact path='/resume' render={({ match }) => <ResumeMain match={match} />} />
+            <Route exact path='/resume' render={({ match }) => <Resume match={match} />} />
+
+            {/* <Route exact path='/resume' render={({ match }) => <ResumeMain match={match} />} /> */}
+
             <Route exact path='/services' render={({ match }) => <Services match={match} />} />
             <Route exact path='/portfolio' render={({ match }) => <Portfolio match={match} />} />
             <Route exact path='/contact' render={({ match }) => <Contact match={match} />} />

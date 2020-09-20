@@ -1,13 +1,8 @@
 const mongoose = require('mongoose');
 
 const ResumeSchema = new mongoose.Schema({
-  aboutID: {
-    type: mongoose.Schema.Types.ObjectId,
-    ref: 'About',
-    required: true
-  },
-  experience: [
-    {
+  experience:
+    [{
       company: {
         type: String,
         required: true
@@ -23,9 +18,16 @@ const ResumeSchema = new mongoose.Schema({
       description: {
         type: [String],
         required: true
+      },
+      dateRange: {
+        type: [String],
+        required: true
       }
-    }
-  ]
+    }],
+  aboutID: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'about'
+  }
 });
 
 module.exports = mongoose.model('resume', ResumeSchema)
