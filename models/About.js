@@ -5,10 +5,16 @@ const AboutSchema = new mongoose.Schema({
     type: String,
     require: true
   },
-  skills: {
-    type: [String],
-    required: true
-  },
+  skills: [{
+    skillType: {
+      type: [String],
+      required: true
+    },
+    value: {
+      type: [String],
+      required: true
+    }
+  }],
   techSkills: {
     type: [String],
     required: true
@@ -41,6 +47,10 @@ const AboutSchema = new mongoose.Schema({
   ],
   education: [
     {
+      icon: {
+        type: String,
+        required: true
+      },
       school: {
         type: String,
         required: true
@@ -54,18 +64,19 @@ const AboutSchema = new mongoose.Schema({
           type: String,
           required: true
         }
-      ]
+      ],
+      note: {
+        type: String
+      }
     }
   ],
   certification: [
     {
       name: {
         type: String,
-        required: true
       },
       dateRange: {
         type: String,
-        required: true
       }
 
     }]

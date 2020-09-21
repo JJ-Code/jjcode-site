@@ -1,10 +1,12 @@
 import React from 'react';
 import Icofont from 'react-icofont';
 
+
 const SocialLinks = () => {
   return (
 
     <div className="social-links">
+ 
       {/* <a href="#" className="twitter">
         <Icofont icon="icofont-twitter" />
       </a> */}
@@ -12,15 +14,17 @@ const SocialLinks = () => {
       {/* <a href="#" className="facebook">
         <Icofont icon="icofont-facebook" />
       </a> */}
-      <a href="#" className="instagram">
+        
+      {/* <a href="#" className="instagram">
         <Icofont icon="icofont-instagram" />
-      </a>
-      <a href="#" className="google-plus">
+      </a> */}
+      <a href="https://github.com/JJ-Code" className="google-plus">
         <Icofont icon="icofont-github" />
       </a>
-      <a href="#" className="linkedin">
+      <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
         <Icofont icon="icofont-linkedin" />
-      </a>
+        </a>
+      
     </div>
   )
 }

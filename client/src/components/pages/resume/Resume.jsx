@@ -34,10 +34,8 @@ const Resume = ({ match, page: { url }, resumeData: { experience, loading }, set
                   experience.map((element) => {
                     
                     return (
-                      <div className="col-lg-6" key={uuid()}>
-                        {console.log(element.title)}
-                        <ResumeItem title={element.title} company={element.company} current={element.current} description={element.description} dateRange={element.dateRange} key={element._id} />
-                        </div>
+                      <ResumeItem title={element.title} company={element.company} current={element.current} description={element.description} dateRange={element.dateRange} id={element._id} key={uuid()}/>
+                        
                     )
                   })
                 }

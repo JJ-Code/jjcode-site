@@ -1,20 +1,26 @@
 import React, { Fragment } from 'react';
-
-const ResumeItem = ({ title, company, description, current }) => {
+import { v4 as uuid } from 'uuid';
+const ResumeItem = ({ id, title, company, description, current, dateRange }) => {
   console.log("title");
   return (
 
     <Fragment >
-      <h3 className="resume-title">{title}</h3>
-      <div className="resume-item">
-        <h4>{company}</h4>
-        <p><em>{description}</em></p>
+      <div className="col-lg-6" key={id}>
+        <h3 className="resume-title">{title}</h3>
+        <div className="resume-item">
+          <h4>{company}</h4>
+          <h5>{dateRange}</h5>
+          {/* <p><em>{description}</em></p> */}
 
-        <ul>
-          <li>Portland par 127,Orlando, FL</li>
-          <li>(123) 456-7891</li>
-          <li>alice.barkley@example.com</li>
-        </ul>
+          <ul>
+            {
+              description.map((el) => {
+                return (<li key={uuid()}>{el}</li>)
+              })
+            }
+
+          </ul>
+        </div>
       </div>
     </Fragment>
 

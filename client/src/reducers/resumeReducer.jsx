@@ -1,9 +1,9 @@
 import { GET_RESUME_DATA, SET_LOADING } from '../actions/types';
 
 const initialState = {
+  loading: true,
   aboutID: null,
   experience: [],
-  loading: true,
   error: null
 };
 

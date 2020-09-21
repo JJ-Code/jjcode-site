@@ -7,7 +7,7 @@ import { fetchResumeData } from '../../../actions/resume';
 import { connect } from 'react-redux';
 import Icofont from 'react-icofont';
 import Bio from "./Bio";
-import Count from "./Count";
+import Education from "./Education";
 import Skills from "./Skills";
 import Interest from "./Interest";
 import Testimonials from "./Testimonials";
@@ -23,7 +23,7 @@ const About = ({ match, page: { url, loading }, setURL, fetchAboutData, fetchRes
   return (
     <section id="about" className="about">
       <Bio />
-      <Count />
+      <Education />
       <Skills />
       <Interest />
       <Testimonials />

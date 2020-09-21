@@ -63,10 +63,26 @@
 .counts .count-box p {
   padding: 0;
   margin: 0;
-  font-family: "Raleway", sans-serif;
+  font-family: 'Raleway', sans-serif;
   font-size: 14px;
 }
 
+.counts .count-school {
+  color: #18d26e;
+}
+
+#count-date {
+  font-size: 13px;
+  margin-bottom: 10px;
+  color: #fcc100;
+}
+
+/* .count-degree {
+  color: #fcc100;
+} */
+#count-note {
+  font-size: 10px;
+}
 /*--------------------------------------------------------------
 # Skills
 --------------------------------------------------------------*/
@@ -82,7 +98,7 @@
   text-transform: uppercase;
   display: block;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
+  font-family: 'Poppins', sans-serif;
   color: #fff;
 }
 
@@ -98,7 +114,7 @@
 .skills .progress-bar {
   width: 1px;
   height: 10px;
-  transition: .9s;
+  transition: 0.9s;
   background-color: #18d26e;
 }
 
@@ -162,7 +178,8 @@
   margin: 0 0 0 45px;
 }
 
-.testimonials .testimonial-item .quote-icon-left, .testimonials .testimonial-item .quote-icon-right {
+.testimonials .testimonial-item .quote-icon-left,
+.testimonials .testimonial-item .quote-icon-right {
   color: rgba(255, 255, 255, 0.25);
   font-size: 26px;
 }
@@ -191,7 +208,8 @@
   z-index: 1;
 }
 
-.testimonials .owl-nav, .testimonials .owl-dots {
+.testimonials .owl-nav,
+.testimonials .owl-dots {
   margin-top: 5px;
   text-align: center;
 }
@@ -212,7 +230,6 @@
 .resizeImage {
   width: 400px !important;
   height: 400px !important;
-
 }
 
 @media (max-width: 767px) {

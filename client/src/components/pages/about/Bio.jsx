@@ -64,7 +64,7 @@ const Bio = ({ aboutData: { summary } }) => {
           <img src={climb} className="img-fluid" alt="" />
         </div>
         <div className="col-lg-8 pt-4 pt-lg-0 content" data-aos="fade-left">
-          <h3>UI/UX &amp; Graphic Designer</h3>
+          <h3>Fullstack web developer in product management with a mind of a marketer</h3>
           <p className="font-italic">
             {summary}
           </p>
@@ -89,8 +89,7 @@ const Bio = ({ aboutData: { summary } }) => {
 
           </div>
           <p>
-            Officiis eligendi itaque labore et dolorum mollitia officiis optio vero. Quisquam sunt adipisci omnis et ut. Nulla accusantium dolor incidunt officia tempore. Et eius omnis.
-            Cupiditate ut dicta maxime officiis quidem quia. Sed et consectetur qui quia repellendus itaque neque. Aliquid amet quidem ut quaerat cupiditate. Ab et eum qui repellendus omnis culpa magni laudantium dolores.
+    f
           </p>
         </div>
       </div>
