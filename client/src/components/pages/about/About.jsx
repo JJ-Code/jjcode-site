@@ -10,14 +10,14 @@ import Bio from "./Bio";
 import Education from "./Education";
 import Skills from "./Skills";
 import Interest from "./Interest";
-import Testimonials from "./Testimonials";
+import Testimonials from "./Testimonials2";
 
 
 const About = ({ match, page: { url, loading }, setURL, fetchAboutData, fetchResumeData }) => {
   console.log(match)
   useEffect(() => {
     fetchAboutData()
-  fetchResumeData()
+    fetchResumeData()
     setURL(match.path)
   }, [setURL, match.path]);
   return (

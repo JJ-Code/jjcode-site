@@ -1,10 +1,11 @@
-import React, { useState} from 'react'
+import React, { useState } from 'react'
 import Carousel from 'react-bootstrap/Carousel'
 import climb from "../../../images/climb.jpg";
 import { v4 as uuid } from 'uuid';
 import TestimonialsIcofont from "./aboutLayouts/TestimonialsIcofont";
 import Icofont from 'react-icofont';
 import { chunkArray } from '../../../utilities/helperFX';
+
 
 const Testimonials = () => {
   const testimonialsDataObj = [{
@@ -37,36 +38,36 @@ const Testimonials = () => {
     setIndex(selectedIndex);
   };
 
-//   const iconList = (arr) => {
-//     arr.map((curr) => {
-//      console.log(curr)
-//      let block =   (<Carousel.Item >
-//           <div className="testimonial-item" data-aos="fade-up">
-//             <Carousel.Caption>
-              
-//               <p>  {curr.comment} </p>
-//               <p>
-//                 <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
-//                 {curr.comment}
-//                 <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
-//               </p>
-//             </Carousel.Caption>
-//             <img
-//               className="testimonial-img resizeImage"
-//               src={curr.image}
-//               alt={curr.name}
-//             />
-//             <Carousel.Caption>
-//               <h3>{curr.name}</h3>
-//               <h4>{curr.jobTitle}</h4>
-//             </Carousel.Caption>
-//           </div>
-//         </Carousel.Item>)
-// return block
+  //   const iconList = (arr) => {
+  //     arr.map((curr) => {
+  //      console.log(curr)
+  //      let block =   (<Carousel.Item >
+  //           <div className="testimonial-item" data-aos="fade-up">
+  //             <Carousel.Caption>
 
-      
-//     })
-//   }
+  //               <p>  {curr.comment} </p>
+  //               <p>
+  //                 <Icofont icon="bx bxs-quote-alt-left quote-icon-left" />
+  //                 {curr.comment}
+  //                 <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
+  //               </p>
+  //             </Carousel.Caption>
+  //             <img
+  //               className="testimonial-img resizeImage"
+  //               src={curr.image}
+  //               alt={curr.name}
+  //             />
+  //             <Carousel.Caption>
+  //               <h3>{curr.name}</h3>
+  //               <h4>{curr.jobTitle}</h4>
+  //             </Carousel.Caption>
+  //           </div>
+  //         </Carousel.Item>)
+  // return block
+
+
+  //     })
+  //   }
   return (
     <div className="testimonials container">
 
@@ -82,14 +83,14 @@ const Testimonials = () => {
             return <TestimonialsIcofont name={curr.name} image={curr.image} comment={curr.comment} jobTitle={curr.jobTitle} key={uuid()} handleSelect={handleSelect}/>
           })} */}
 
-          
+
           <Carousel.Item key={uuid()}>
             <div className="testimonial-item" data-aos="fade-up">
               <Carousel.Caption>
                 {console.log(testimonialsDataObj[0].comment)}
                 <Icofont icon="court" />
                 <p>
-                  
+
                   {testimonialsDataObj[0].comment}
                   <Icofont icon="bx bxs-quote-alt-right quote-icon-right" />
                 </p>
@@ -104,7 +105,7 @@ const Testimonials = () => {
                 <h4>{testimonialsDataObj[0].jobTitle}</h4>
               </Carousel.Caption>
             </div>
-          </Carousel.Item> 
+          </Carousel.Item>
 
           <Carousel.Item key={uuid()}>
             <div className="testimonial-item" data-aos="fade-up">
@@ -122,18 +123,22 @@ const Testimonials = () => {
                 src={testimonialsDataObj[1].image}
                 alt={testimonialsDataObj[1].name}
               />
+
+              
               <Carousel.Caption>
                 <h3>{testimonialsDataObj[1].name}</h3>
                 <h4>{testimonialsDataObj[1].jobTitle}</h4>
+
+
               </Carousel.Caption>
             </div>
-          </Carousel.Item> 
+          </Carousel.Item>
 
 
 
 
 
- 
+
         </Carousel>
 
       </div>
