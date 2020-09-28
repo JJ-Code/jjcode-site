@@ -9,7 +9,7 @@ export const fetchAboutData = () => async dispatch => {
   try {
     const res = await api.get(`/about/${aboutJay}`);
     const data = await api.get(`/resume/${resumeJayID}`);
-    console.log(data);
+    console.log(res);
     dispatch({
       type: GET_ABOUT_DATA,
       payload: res.data

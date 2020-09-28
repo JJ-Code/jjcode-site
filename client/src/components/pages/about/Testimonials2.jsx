@@ -56,7 +56,7 @@ const Testimonials = () => {
 
           <MDBCarousel
             activeItem={1}
-            length={3}
+            length={2}
             slide={true}
             showControls={true}
             multiItem

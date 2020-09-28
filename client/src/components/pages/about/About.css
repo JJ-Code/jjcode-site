@@ -151,14 +151,12 @@
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
-section .testimonials .card {
-  background: rgba(0, 0, 0, 0.9) !important;
-
-}
 
 .testimonials .testimonial-item {
   box-sizing: content-box;
   min-height: 320px;
+  padding-top: 25px;
+  padding-top: 25px;
 }
 
 .testimonials .testimonial-item .testimonial-img {
@@ -233,8 +231,8 @@ section .testimonials .card {
 }
 
 .resizeImage {
-  width: 250px !important;
-  height: 250px !important;
+  width: 100px !important;
+  height: 100px !important;
 }
 
 @media (max-width: 767px) {

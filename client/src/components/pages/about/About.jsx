@@ -10,7 +10,7 @@ import Bio from "./Bio";
 import Education from "./Education";
 import Skills from "./Skills";
 import Interest from "./Interest";
-import Testimonials from "./Testimonials2";
+import Testimonials from "./Testimonials3";
 
 
 const About = ({ match, page: { url, loading }, setURL, fetchAboutData, fetchResumeData }) => {
