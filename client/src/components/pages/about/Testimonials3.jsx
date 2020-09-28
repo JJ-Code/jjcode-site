@@ -1,4 +1,4 @@
-import React, { useState, fragment } from 'react'
+import React, { useState } from 'react'
 import climb from "../../../images/climb.jpg";
 import reksImage from "../../../images/recs/rec-rekha.jpeg";
 import { v4 as uuid } from 'uuid';
@@ -60,7 +60,7 @@ const Testimonials = () => {
           <div className="myCarousel" className="row testimonial-item">
 
             {/* card 1 */}
-            <div className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be
@@ -81,7 +81,7 @@ const Testimonials = () => {
 
             {/* card2  */}
 
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
@@ -107,7 +107,7 @@ const Testimonials = () => {
 
             {/* card3  */}
 
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
@@ -136,7 +136,7 @@ const Testimonials = () => {
           <div className="myCarousel" className="row testimonial-item">
 
             {/* card 1 */}
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be
@@ -157,7 +157,7 @@ const Testimonials = () => {
 
             {/* card2  */}
 
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
@@ -183,7 +183,7 @@ const Testimonials = () => {
 
             {/* card3  */}
 
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4">
+            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
               <p>
                 <Icofont icon="quote-left" className="quote-icon-left" />
                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site

@@ -8,8 +8,8 @@ export const fetchAboutData = () => async dispatch => {
   //console.log("fetchAbout");
   try {
     const res = await api.get(`/about/${aboutJay}`);
-    const data = await api.get(`/resume/${resumeJayID}`);
-    console.log(res);
+    // const data = await api.get(`/resume/${resumeJayID}`);
+    // console.log(data);
     dispatch({
       type: GET_ABOUT_DATA,
       payload: res.data
