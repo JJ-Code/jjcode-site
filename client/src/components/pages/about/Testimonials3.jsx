@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import climb from "../../../images/climb.jpg";
 import reksImage from "../../../images/recs/rec-rekha.jpeg";
 import { v4 as uuid } from 'uuid';
@@ -10,34 +10,62 @@ import { Carousel } from "react-responsive-carousel";
 
 const Testimonials = () => {
   const testimonialsDataObj = [{
-    name: "john",
-    image: climb,
+    name: "reks",
+    image: reksImage,
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
     comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
     jobTitle: "CEO"
   },
   {
     name: "pat",
     image: climb,
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
     comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
     jobTitle: "CEO"
   },
   {
     name: "chris",
-    image: climb,
+    image: "https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg",
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
     comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
     jobTitle: "CEO"
   },
   {
     name: "Jan",
-    image: climb,
+    image: "https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg",
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
     comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
     jobTitle: "CEO"
-  }]
-  const [index, setIndex] = useState(0);
+  },
 
-  const handleSelect = (selectedIndex, e) => {
-    setIndex(selectedIndex);
-  };
+  {
+    name: "chris",
+    image: climb,
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
+    comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    jobTitle: "CEO"
+  },
+  {
+    name: "Jan",
+    image: "https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg",
+    linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
+    comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    jobTitle: "CEO"
+  }
+
+  ]
+
+  console.log(testimonialsDataObj)
+  const third = chunkArray(testimonialsDataObj, 3)
+
+  console.log(third);
+
+  const wrapper = (arr) => {
+    return (<div className="myCarousel" className="row testimonial-item">
+      {arr}
+    </div>)
+
+  }
 
   return (
     <div className="testimonials container">
@@ -56,6 +84,22 @@ const Testimonials = () => {
           interval={6100}
         >
 
+          {/* created a map to loop thru the chuck arrary who has been cut into a subarray of 3 objects to represents the 3 cards per slide. created a wrapper to hold the cards in 1 slide. */}
+          {
+            third.map((currArr => {
+
+              let subArr = currArr.map((curr)=>{
+                return <TestimonialsIcofont 
+                  name={curr.name} image={curr.image} comment={curr.comment} jobTitle={curr.jobTitle} linkedinURL={curr.linkedinURL} key={uuid()} />
+                  })
+              return wrapper(subArr)
+            }))
+          }
+
+
+
+
+
           {/* slide 1 */}
           <div className="myCarousel" className="row testimonial-item">
 
@@ -72,7 +116,7 @@ const Testimonials = () => {
               <h3>Shirley Fultz</h3>
               <h4>
                 Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
+                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" rel="noopener noreferrer" className="linkedin">
                   <Icofont icon="icofont-linkedin" />
                 </a>
               </h4>
