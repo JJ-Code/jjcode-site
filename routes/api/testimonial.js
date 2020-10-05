@@ -65,11 +65,11 @@ router.get('/:id', async (req, res) => {
 });
 
 
-// @route    Post api/resume/about id/experience
+// @route    Post api/resume/about id/people
 // @desc     Add resume experience
 // @access   Private
-router.post('/:id/testimonial', [
-  check('testimonial', 'testimonial is required').not().isEmpty()],
+router.post('/:id/people', [
+  check('people', 'people array is required').not().isEmpty()],
   async (req, res) => {
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
@@ -78,7 +78,7 @@ router.post('/:id/testimonial', [
     console.log(req.params.id);
     //destructing the params from the post request
     const {
-      experience
+      people
     } = req.body;
 
 
