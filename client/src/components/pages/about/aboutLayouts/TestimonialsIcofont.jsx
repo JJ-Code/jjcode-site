@@ -10,15 +10,16 @@ const TestimonialsIcofont = ({ comment, image, name, jobTitle, linkedinURL }) =>
     <div className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
       <p>
         <Icofont icon="quote-left" className="quote-icon-left" />
-                {comment}
-                   <Icofont icon="quote-right" className="quote-icon-right" />
+        {comment}
+        <Icofont icon="quote-right" className="quote-icon-right" />
       </p>
 
       <img src={image} className="resizeImage rounded-circle z-depth-1 img-fluid testimonial-img" />
       <h3>{name}</h3>
       <h4> {jobTitle} 	&nbsp;
-                   <a href={linkedinURL} target="_blank" rel="noopener noreferrer" className="linkedin">
+        <a href={linkedinURL} target="_blank" rel="noopener noreferrer" className="linkedin">
           <Icofont icon="icofont-linkedin" />
+          
         </a>
       </h4>
 

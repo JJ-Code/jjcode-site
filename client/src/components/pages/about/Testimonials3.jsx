@@ -3,7 +3,6 @@ import climb from "../../../images/climb.jpg";
 import reksImage from "../../../images/recs/rec-rekha.jpeg";
 import { v4 as uuid } from 'uuid';
 import TestimonialsIcofont from "./aboutLayouts/TestimonialsIcofont";
-import Icofont from 'react-icofont';
 import { chunkArray } from '../../../utilities/helperFX';
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
@@ -13,7 +12,7 @@ const Testimonials = () => {
     name: "reks",
     image: reksImage,
     linkedinURL: "https://www.linkedin.com/in/jaymee-liu",
-    comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.",
+    comment: "Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa. jfjfjhgfhgfhg",
     jobTitle: "CEO"
   },
   {
@@ -61,8 +60,8 @@ const Testimonials = () => {
   console.log(third);
 
   const wrapper = (arr) => {
-    return (<div className="myCarousel" className="row testimonial-item">
-      {arr}
+    return (<div className="myCarousel" className="row testimonial-item" key={uuid()}>
+      {arr}s
     </div>)
 
   }
@@ -88,169 +87,13 @@ const Testimonials = () => {
           {
             third.map((currArr => {
 
-              let subArr = currArr.map((curr)=>{
-                return <TestimonialsIcofont 
+              let subArr = currArr.map((curr) => {
+                return <TestimonialsIcofont
                   name={curr.name} image={curr.image} comment={curr.comment} jobTitle={curr.jobTitle} linkedinURL={curr.linkedinURL} key={uuid()} />
-                  })
+              })
               return wrapper(subArr)
             }))
           }
-
-
-
-
-
-          {/* slide 1 */}
-          <div className="myCarousel" className="row testimonial-item">
-
-            {/* card 1 */}
-            <div className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be
-                  distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src={reksImage} className="resizeImage rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>
-                Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" rel="noopener noreferrer" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-
-            {/* card2  */}
-
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" className="rounded-circle z-depth-1 img-fluid" className="rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-
-
-            {/* card3  */}
-
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" className="rounded-circle z-depth-1 img-fluid" className="rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-          </div>
-          {/* end of row */}
-
-          {/* slide 1 */}
-          <div className="myCarousel" className="row testimonial-item">
-
-            {/* card 1 */}
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be
-                  distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(20).jpg" className="rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>
-                Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-
-            {/* card2  */}
-
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(3).jpg" className="rounded-circle z-depth-1 img-fluid" className="rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-
-
-            {/* card3  */}
-
-            <div lg="4" md="5" className="mb-lg-0 mb-5 col-lg-4 col-md-4" key={uuid()}>
-              <p>
-                <Icofont icon="quote-left" className="quote-icon-left" />
-                  It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-
-                   It's freeing to be able to catch up on customized news and not be distracted by a social media element on the same site
-                   <Icofont icon="quote-right" className="quote-icon-right" />
-              </p>
-
-              <img src="https://mdbootstrap.com/img/Photos/Avatars/img%20(30).jpg" className="rounded-circle z-depth-1 img-fluid" className="rounded-circle z-depth-1 img-fluid testimonial-img" />
-              <h3>Shirley Fultz</h3>
-              <h4>Designer 	&nbsp;
-                   <a href="https://www.linkedin.com/in/jaymee-liu" target="_blank" className="linkedin">
-                  <Icofont icon="icofont-linkedin" />
-                </a>
-              </h4>
-
-            </div>
-          </div>
-          {/* end of row */}
 
 
         </Carousel>

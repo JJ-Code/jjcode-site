@@ -1,0 +1,48 @@
+{
+  "people": [
+    {
+      "name": "Rekha Gavini",
+      "title": "Jaymee and I worked together on the same PM team for quite some time. She is an intelligent thinker with a passion for Product. One of her strengths is thinking through the feature or problem from a user perspective and also from a technical perspective. I've seen her build features in a smarter way rather than just the way they came about from one specific user problem. She's a great collaborator and always manages to instill excitement into the team.",
+      "linkedin": "https://www.linkedin.com/in/rgavini",
+      "jobTitle": "Director of Product",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875028/jjcode-site/recs-profile/rec-rekha_cihum6.jpg"
+    },
+    {
+      "name": "Ali Emami",
+      "title": "If I had to describe Jaymee in one phrase it would be extremely dedicated. I have had the pleasure of knowing Jaymee for 2 years, during which we collaborated on many projects. I was particularly impressed with Jaymee’s ability to effectively lead and guide her team. No matter how hard or complicated a challenge is Jaymee has the ability to take a step back and devise a plan that guides the team in the right direction. Among other skills, I noticed Jaymee is extremely dedicated to the task at hand. On more than one occasions I have seen that his dedication is what motivates the entire team. I have no doubt that Jaymee will be a great asset in any team that she joins.",
+      "linkedin": "https://www.linkedin.com/in/ali-emami-536a04133",
+      "jobTitle": "Software Engineer",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875021/jjcode-site/recs-profile/ali-rec_volhay.jpg"
+    },
+    {
+      "name": "Sonya Taylor",
+      "title": "Jaymee is a great asset to CBS Interactive - we were closely together through multiple Grammy and ACM Awards ad integrations for a number of years. She’s dedicated, hard working, knowledgeable, and knows how to drive results while working with many different stakeholders within CBS and externally with partners such as the Recording Academy. She is someone I was always able to count on would welcome the chance to work with her again!",
+      "linkedin": "https://www.linkedin.com/in/sonyataylor/",
+      "jobTitle": "Media Partnership Marketing",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875067/jjcode-site/recs-profile/sonya-rec_ghwkcp.jpg"
+    },
+    {
+      "name": "Dani Roxberry",
+      "title": "As Jaymee's instructor, I've had the pleasure of witnessing her personal blend of technical skill and project management expertise the past six months at UC Berkeley Coding Bootcamp. She's not only lead teams in producing beautiful, effective projects -- she takes the extra step to ensure her team has all the required technical knowledge to effectively implement, even if that means teaching it herself! A powerhouse of planning and execution, I expect Jaymee to be a tremendous addition to any organization!",
+      "linkedin": "https://www.linkedin.com/in/droxey",
+      "jobTitle": "Software Engineering Instructor",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875036/jjcode-site/recs-profile/dani-rec_uwtcv5.jpg"
+    },
+    {
+      "name": "Shimon Schwartz",
+      "title": "I've been working with Jaymee directly since I've started at CBS Interactive. I've always found it easy to work with her, both to follow her requests, and to resolve any ad-related concerns whenever they came up. She's responsible and stays on top of things, and doesn't let them slip away whether it's in her interests or in the interests of the other party she's working with. Jaymee is very knowledgeable and is always on top of her facts. She's also very friendly and easy to talk to, which is an important characteristic to me, given how complex the world of ads is. She is open to discussion and to finding a compromise, as well as helpful with issues.",
+      "linkedin": "https://www.linkedin.com/in/shimonenator",
+      "jobTitle": "Director of Software Engineering",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875058/jjcode-site/recs-profile/shimon-rec_kuqrof.jpg"
+    },
+    {
+      "name": "Slava Lukowsky",
+      "title": "Jaymee is an outstanding professional. I've worked with her on numerous ad-related projects for CBS.com. She is extremely knowledgeable, thorough, responsive, and has great attention to detail. Jaymee is fast to troubleshoot and identify bugs, as well as provide an array of possible solutions, both from software and ad management sides. Jaymee is a huge asset to the organization. She is a pleasure to work with.",
+      "linkedin": "https://www.linkedin.com/in/slava-lukowsky-642a7a1",
+      "jobTitle": "Senior Software Engineer",
+      "image": "https://res.cloudinary.com/dd1pzfmqs/image/upload/v1601875063/jjcode-site/recs-profile/slava-rec_u7pbv1.jpg"
+    }
+  ],
+
+  "aboutID": "5d713995b721c3bb38c1f5d0"
+}

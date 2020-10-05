@@ -15,6 +15,7 @@ connectDB();
 //Routes files
 const about = require('./routes/api/about');
 const resume = require('./routes/api/resume');
+const testimonial = require('./routes/api/testimonial');
 
 //initatlize express
 const app = express();
@@ -34,7 +35,7 @@ if (process.env.NODE_ENV === 'development') {
 //Mount routers
 app.use('/api/about', about);
 app.use('/api/resume', resume);
-
+app.use('/api/testimonial', testimonial);
 
 
 //Test Route
